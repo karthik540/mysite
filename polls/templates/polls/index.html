@@ -1,0 +1,8 @@
+{% if questionData %}
+    <ul>
+    {% for question in questionData %}
+        <li>{{ question.id }}</li>
+        <li>{{ question.questionText }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
