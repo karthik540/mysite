@@ -11,3 +11,16 @@ python manage.py migrate
 
 python manage.py createsuperuser
 admin.site.register(Question)
+
+View 
+1. HttpResponse
+2. Http404 error
+
+try:
+    question = Question.objects.get(pk=question_id)
+except:
+    raise Http404("Question doesn't exist")
+return render(request, 'polls/details.html' , context = {'question': question})
+
+//Shortcut for both http and 404
+question = get_object_or_404(Question, pk=question_id)

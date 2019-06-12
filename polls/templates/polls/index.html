@@ -2,7 +2,9 @@
     <ul>
     {% for question in questionData %}
         <li>{{ question.id }}</li>
-        <li>{{ question.questionText }}</li>
+        <li><a href="{% url 'index' {{question.id}}/">{{ question.questionText }}</a></li>
     {% endfor %}
     </ul>
+{% else %}
+    <h3>No polls available</h3>
 {% endif %}
