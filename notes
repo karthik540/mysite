@@ -24,3 +24,9 @@ return render(request, 'polls/details.html' , context = {'question': question})
 
 //Shortcut for both http and 404
 question = get_object_or_404(Question, pk=question_id)
+
+//Backtrack get
+questionObject.choice_set.all()         // SQL: Am i a joke to yOu ?
+
+//For loop counter
+forloop.counter
